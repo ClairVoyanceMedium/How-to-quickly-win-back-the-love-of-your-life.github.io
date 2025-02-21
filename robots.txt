@@ -1,42 +1,45 @@
-# Indique aux robots que toutes les pages peuvent être explorées, sauf restrictions spécifiées
+# robots.txt for https://clairvoyancemedium.github.io/How-to-quickly-win-back-the-love-of-your-life.github.io/
+# Last Updated: 2025-02-21
+#
+# Optimisé pour : référencement maximum, mobile-first, sécurité renforcée, couverture moteurs prioritaires
+
+# Règles globales pour tous les robots
 User-agent: *
-Disallow: /admin/
+Disallow: /cgi-bin/
 Disallow: /tmp/
 Disallow: /private/
-
-# Bloquer des URL avec paramètres inutiles pour l'indexation
-Disallow: /*?debug=true
-Disallow: /*?preview=true
-
-# Permettre les fichiers nécessaires au bon affichage et fonctionnement
-Allow: /css/
-Allow: /js/
-Allow: /images/
-
-# Référencement des ressources multimédias
-Allow: *.png
-Allow: *.jpg
-Allow: *.webp
-Allow: *.css
-Allow: *.js
-
-# Fournir le chemin du fichier sitemap pour une meilleure indexation
-Sitemap: https://www.clairvoyancemedium.com/sitemap.xml
-
-# Autorisation pour les robots Google et Bing pour maximiser les campagnes publicitaires
-User-agent: Googlebot
-Allow: /
-User-agent: AdsBot-Google
-Allow: /
-User-agent: Bingbot
-Allow: /
-
-# Bloquer les robots nuisibles ou non désirés
-User-agent: BadBot
-Disallow: /
-User-agent: EvilScraper
-Disallow: /
-
-# Empêcher l'exploration des fichiers sensibles
-Disallow: /config/
+Disallow: /admin/
 Disallow: /backup/
+Disallow: /*.log$
+Disallow: /*.sql$
+Crawl-delay: 5
+
+# Bots prioritaires (Google, Bing, Apple, DuckDuckGo)
+User-agent: Googlebot
+User-agent: Googlebot-Mobile
+User-agent: Googlebot-News
+User-agent: Mediapartners-Google
+User-agent: Bingbot
+User-agent: Applebot
+User-agent: DuckDuckBot
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /private/
+Disallow: /admin/
+Disallow: /backup/
+Disallow: /*.log$
+Disallow: /*.sql$
+
+# Blocage des bots indésirables et gourmands en ressources
+User-agent: AhrefsBot
+User-agent: SemrushBot
+User-agent: MJ12bot
+User-agent: YandexBot
+User-agent: Baiduspider
+User-agent: DotBot
+User-agent: PetalBot
+Disallow: /
+
+# Sitemaps pour une découverte optimisée
+Sitemap: https://clairvoyancemedium.github.io/sitemap.xml
+Sitemap: https://clairvoyancemedium.github.io/mobile-sitemap.xml
